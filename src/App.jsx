@@ -199,7 +199,7 @@ export default function App() {
           <div className="max-w-2xl mx-auto space-y-4">
             <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 relative overflow-hidden">
               <span className="text-[9px] font-mono tracking-widest text-slate-500 uppercase font-bold block">Hecho Económico</span>
-              <p className="text-sm font-semibold text-slate-100 leading-relaxed">"{exercises: ejerciciosVariaciones[currentIdx].enunciado}"</p>
+              <p className="text-sm font-semibold text-slate-100 leading-relaxed">"{ejerciciosVariaciones[currentIdx].enunciado}"</p>
               <div className="grid grid-cols-2 gap-3 pt-2">
                 {['Permutativa', 'Modificativa'].map((option) => (
                   <button key={option} disabled={!!selectedAnswer} onClick={() => handleAnswerSelection(option)} className={`p-3 border rounded-xl text-xs font-bold transition-all ${selectedAnswer ? option === ejerciciosVariaciones[currentIdx].tipoCorrecto ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400' : 'border-slate-800 opacity-40 text-slate-500' : 'border-slate-800 bg-slate-950/40 text-slate-300 hover:border-slate-700'}`}>{option}</button>
