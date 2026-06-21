@@ -5,8 +5,7 @@ import {
   Search, 
   GraduationCap, 
   ClipboardCheck, 
-  MessagesSquare,
-  Bookmark
+  MessagesSquare
 } from 'lucide-react';
 
 // Importación de Componentes por Módulos
@@ -57,50 +56,53 @@ export default function App() {
   ) : [];
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-zinc-100 font-sans selection:bg-indigo-500 selection:text-white antialiased">
+    <div className="min-h-screen bg-[#090d16] text-slate-200 font-sans selection:bg-indigo-500 selection:text-white antialiased">
       
       {/* HEADER PRINCIPAL */}
-      <header className="border-b border-zinc-800 bg-neutral-900/60 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-5 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-indigo-500/10 text-indigo-400 rounded-xl border border-indigo-500/20">
+      <header className="border-b border-slate-800/70 bg-[#090d16]/80 backdrop-blur-md sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col lg:flex-row items-center justify-between gap-5">
+          
+          {/* Identidad Institucional */}
+          <div className="flex items-center gap-3.5">
+            <div className="p-2.5 bg-indigo-600/10 text-indigo-400 rounded-xl border border-indigo-500/20 shadow-inner">
               <GraduationCap className="w-6 h-6" />
             </div>
             <div>
-              <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-zinc-100 to-zinc-400">
+              <h1 className="text-xl font-bold tracking-tight text-slate-100">
                 UGD Campus Contable
               </h1>
-              <p className="text-xs text-zinc-400 font-medium tracking-wide">Licenciatura en Administración • Panel de Alta Performance</p>
+              <p className="text-xs text-slate-400 font-medium tracking-wide">Licenciatura en Administración • Centro de Alta Performance</p>
             </div>
           </div>
           
-          {/* NAVEGACIÓN GLOBAL */}
-          <nav className="flex flex-wrap bg-neutral-950 p-1.5 rounded-xl border border-zinc-800 w-full md:w-auto justify-center gap-1">
-            <button onClick={() => setActiveTab('unidades')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'unidades' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><BookOpen className="w-4 h-4" /> Módulos Teóricos</button>
-            <button onClick={() => setActiveTab('simulador')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'simulador' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><RefreshCw className="w-4 h-4" /> Variaciones</button>
-            <button onClick={() => setActiveTab('cuentas')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'cuentas' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><Search className="w-4 h-4" /> Manual Cuentas</button>
-            <button onClick={() => setActiveTab('cuestionario')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'cuestionario' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><ClipboardCheck className="w-4 h-4" /> Cuestionarios</button>
-            <button onClick={() => setActiveTab('profesor')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'profesor' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><MessagesSquare className="w-4 h-4" /> Profesor IA</button>
+          {/* NAVEGACIÓN GLOBAL - DISEÑO ESTILO SAAS */}
+          <nav className="flex flex-wrap bg-slate-900/90 p-1 rounded-xl border border-slate-800/80 shadow-2xl justify-center gap-1">
+            <button onClick={() => setActiveTab('unidades')} className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all duration-200 ${activeTab === 'unidades' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}`}><BookOpen className="w-4 h-4" /> Módulos Teóricos</button>
+            <button onClick={() => setActiveTab('simulador')} className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all duration-200 ${activeTab === 'simulador' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}`}><RefreshCw className="w-4 h-4" /> Variaciones</button>
+            <button onClick={() => setActiveTab('cuentas')} className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all duration-200 ${activeTab === 'cuentas' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}`}><Search className="w-4 h-4" /> Manual Cuentas</button>
+            <button onClick={() => setActiveTab('cuestionario')} className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all duration-200 ${activeTab === 'cuestionario' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}`}><ClipboardCheck className="w-4 h-4" /> Cuestionarios</button>
+            <button onClick={() => setActiveTab('profesor')} className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-lg transition-all duration-200 ${activeTab === 'profesor' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}`}><MessagesSquare className="w-4 h-4" /> Profesor IA</button>
           </nav>
         </div>
       </header>
 
       {/* CONTENEDOR DINÁMICO */}
-      <main className="max-w-6xl mx-auto px-5 py-8">
+      <main className="max-w-7xl mx-auto px-6 py-10">
         
         {activeTab === 'unidades' && (
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
-            {/* Sidebar de Selección de Unidad */}
-            <div className="space-y-2 bg-neutral-900/40 p-3 rounded-2xl border border-zinc-800 md:col-span-1">
-              <span className="text-xs font-bold uppercase tracking-widest text-zinc-500 px-2 block mb-2">Programa Analítico</span>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+            
+            {/* Sidebar de Selección de Unidad - Letras más claras y grandes */}
+            <div className="space-y-1.5 bg-slate-900/40 p-3 rounded-2xl border border-slate-800/60 lg:col-span-1 shadow-sm">
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-500 px-3.5 block mb-2.5">Programa Analítico</span>
               {[1, 2, 3, 4, 5].map((u) => (
                 <button
                   key={u}
                   onClick={() => setSelectedUnidadGlobal(u)}
-                  className={`w-full text-left px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all ${
+                  className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150 ${
                     selectedUnidadGlobal === u 
-                      ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-semibold' 
-                      : 'text-zinc-400 hover:bg-neutral-900 hover:text-zinc-200'
+                      ? 'bg-indigo-600/10 text-indigo-400 border border-indigo-500/20 font-bold' 
+                      : 'text-slate-400 border border-transparent hover:bg-slate-900/80 hover:text-slate-200'
                   }`}
                 >
                   Unidad {u} {u === 1 ? '• El SIC' : u === 2 ? '• El Patrimonio' : u === 3 ? '• Documentación' : u === 4 ? '• Las Cuentas' : '• Rubros'}
@@ -108,8 +110,8 @@ export default function App() {
               ))}
             </div>
 
-            {/* Renderizado de Unidad */}
-            <div className="md:col-span-3">
+            {/* Renderizado de Unidad - Fuente Ampliada para lectura fluida */}
+            <div className="lg:col-span-3 text-base leading-relaxed text-slate-300">
               {selectedUnidadGlobal === 1 && <Unidad1 />}
               {selectedUnidadGlobal === 2 && <Unidad2 />}
               {selectedUnidadGlobal === 3 && <Unidad3 />}
@@ -120,20 +122,20 @@ export default function App() {
         )}
 
         {activeTab === 'simulador' && (
-          <div className="max-w-2xl mx-auto space-y-5">
-            <div className="bg-neutral-900 border border-zinc-800 rounded-2xl p-8 space-y-5">
-              <span className="text-xs font-mono tracking-widest text-zinc-500 uppercase font-bold block">Simulador de Variaciones Patrimoniales</span>
-              <p className="text-lg font-medium text-zinc-100 leading-relaxed">Ejercicio: "{ejerciciosVariaciones[currentIdx].enunciado}"</p>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-8 space-y-6 shadow-xl">
+              <span className="text-xs font-mono tracking-widest text-slate-400 uppercase font-bold block">Simulador de Variaciones Patrimoniales</span>
+              <p className="text-xl font-medium text-slate-100 leading-relaxed">"{ejerciciosVariaciones[currentIdx].enunciado}"</p>
               <div className="grid grid-cols-2 gap-4 pt-2">
                 {['Permutativa', 'Modificativa'].map((option) => (
-                  <button key={option} disabled={!!selectedAnswer} onClick={() => handleAnswerSelection(option)} className={`p-4 border rounded-xl text-sm font-semibold transition-all ${selectedAnswer ? option === ejerciciosVariaciones[currentIdx].tipoCorrecto ? 'border-indigo-500 bg-indigo-500/10 text-indigo-400 font-bold' : 'border-zinc-800 opacity-40 text-zinc-600' : 'border-zinc-800 bg-neutral-950/60 text-zinc-300 hover:border-zinc-600 hover:bg-neutral-900'}`}>{option}</button>
+                  <button key={option} disabled={!!selectedAnswer} onClick={() => handleAnswerSelection(option)} className={`p-4 border rounded-xl text-base font-semibold transition-all duration-150 ${selectedAnswer ? option === ejerciciosVariaciones[currentIdx].tipoCorrecto ? 'border-indigo-500 bg-indigo-500/10 text-indigo-400 font-bold shadow-md shadow-indigo-550/10' : 'border-slate-800 opacity-40 text-slate-600' : 'border-slate-800 bg-slate-950/50 text-slate-300 hover:border-slate-600 hover:bg-slate-900'}`}>{option}</button>
                 ))}
               </div>
               {showExplanation && (
-                <div className="p-5 bg-neutral-950 border border-zinc-800 rounded-xl space-y-3">
-                  <p className="text-sm text-indigo-400 font-mono font-bold tracking-wide">{ejerciciosVariaciones[currentIdx].efecto}</p>
-                  <p className="text-sm text-zinc-400 leading-relaxed">{ejerciciosVariaciones[currentIdx].explicacion}</p>
-                  <button onClick={handleNextEjercicio} className="w-full bg-zinc-100 text-neutral-950 font-bold py-2.5 rounded-lg text-sm hover:bg-white transition-colors mt-3">Siguiente Ejercicio</button>
+                <div className="p-6 bg-slate-950 border border-slate-800/90 rounded-xl space-y-3.5">
+                  <p className="text-sm text-indigo-400 font-mono font-bold tracking-wide uppercase">{ejerciciosVariaciones[currentIdx].efecto}</p>
+                  <p className="text-base text-slate-300 leading-relaxed">{ejerciciosVariaciones[currentIdx].explicacion}</p>
+                  <button onClick={handleNextEjercicio} className="w-full bg-slate-100 text-slate-950 font-bold py-3 rounded-xl text-sm hover:bg-white transition-colors mt-3 shadow-md">Siguiente Ejercicio</button>
                 </div>
               )}
             </div>
@@ -142,38 +144,38 @@ export default function App() {
 
         {activeTab === 'cuentas' && (
           <div className="space-y-4">
-            <div className="flex flex-col md:flex-row gap-6 items-start">
-              <div className="w-full md:w-1/3 space-y-4">
-                <input type="text" placeholder="Buscar por cuenta o rubro..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-neutral-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
-                <div className="bg-neutral-900/20 border border-zinc-800 rounded-2xl max-h-[420px] overflow-y-auto p-2 space-y-1">
+            <div className="flex flex-col lg:flex-row gap-6 items-start">
+              <div className="w-full lg:w-1/3 space-y-4">
+                <input type="text" placeholder="Buscar por cuenta o rubro..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
+                <div className="bg-slate-900/30 border border-slate-800/70 rounded-2xl max-h-[460px] overflow-y-auto p-2 space-y-1 shadow-inner">
                   {filteredCuentas.map((cuenta, idx) => (
-                    <button key={idx} onClick={() => setSelectedCuentaDetalle(cuenta)} className={`w-full text-left px-4 py-3 rounded-xl text-sm transition-all flex justify-between items-center ${selectedCuentaDetalle?.nombre === cuenta.nombre ? 'bg-indigo-500/10 text-indigo-400 font-semibold' : 'text-zinc-400 hover:bg-neutral-900/60'}`}>
+                    <button key={idx} onClick={() => setSelectedCuentaDetalle(cuenta)} className={`w-full text-left px-4 py-3.5 rounded-xl text-sm transition-all duration-150 flex justify-between items-center ${selectedCuentaDetalle?.nombre === cuenta.nombre ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-bold' : 'text-slate-400 hover:bg-slate-900/60 hover:text-slate-200'}`}>
                       {cuenta.nombre}
-                      <span className="text-xs opacity-60 font-mono">{cuenta.naturaleza}</span>
+                      <span className="text-xs opacity-75 font-mono bg-slate-950/40 px-2 py-0.5 rounded-md">{cuenta.naturaleza}</span>
                     </button>
                   ))}
                 </div>
               </div>
 
-              <div className="w-full md:w-2/3">
+              <div className="w-full lg:w-2/3">
                 {selectedCuentaDetalle ? (
-                  <div className="bg-neutral-900 border border-zinc-800 rounded-2xl p-6 space-y-5 text-sm leading-relaxed">
-                    <div className="flex justify-between items-center border-b border-zinc-800 pb-3.5">
-                      <h3 className="text-base font-bold text-zinc-100">{selectedCuentaDetalle.nombre}</h3>
+                  <div className="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-7 space-y-6 text-base leading-relaxed shadow-lg">
+                    <div className="flex justify-between items-center border-b border-slate-800 pb-4">
+                      <h3 className="text-lg font-bold text-slate-100 tracking-tight">{selectedCuentaDetalle.nombre}</h3>
                       <div className="flex gap-2">
-                        <span className="text-xs px-3 py-1 rounded-full bg-neutral-950 text-zinc-400 border border-zinc-800">Saldo {selectedCuentaDetalle.saldo}</span>
-                        <span className="text-xs px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">{selectedCuentaDetalle.rubro}</span>
+                        <span className="text-xs px-3 py-1 rounded-full bg-slate-950 text-slate-400 border border-slate-800 font-medium">Saldo {selectedCuentaDetalle.saldo}</span>
+                        <span className="text-xs px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-semibold">{selectedCuentaDetalle.rubro}</span>
                       </div>
                     </div>
-                    <p><strong className="text-zinc-400 block mb-1 font-medium">¿Qué representa?</strong> {selectedCuentaDetalle.representa}</p>
+                    <p><strong className="text-slate-400 block mb-1 font-semibold text-sm uppercase tracking-wide">¿Qué representa?</strong> {selectedCuentaDetalle.representa}</p>
                     <div className="grid grid-cols-2 gap-4 pt-2">
-                      <div className="bg-neutral-950 p-4 rounded-xl border border-zinc-800"><strong className="text-indigo-400 block mb-1.5 font-semibold">Se DEBITA:</strong> {selectedCuentaDetalle.debita}</div>
-                      <div className="bg-neutral-950 p-4 rounded-xl border border-zinc-800"><strong className="text-zinc-400 block mb-1.5 font-semibold">Se ACREDITA:</strong> {selectedCuentaDetalle.acredita}</div>
+                      <div className="bg-slate-950/70 p-5 rounded-xl border border-slate-800/80"><strong className="text-indigo-400 block mb-2 font-bold text-xs uppercase tracking-wider">Se DEBITA:</strong> {selectedCuentaDetalle.debita}</div>
+                      <div className="bg-slate-950/70 p-5 rounded-xl border border-slate-800/80"><strong className="text-slate-400 block mb-2 font-bold text-xs uppercase tracking-wider">Se ACREDITA:</strong> {selectedCuentaDetalle.acredita}</div>
                     </div>
                   </div>
                 ) : (
-                  <div className="text-center p-16 bg-neutral-900/10 border border-dashed border-zinc-800 rounded-2xl text-sm text-zinc-500">
-                    Seleccioná una cuenta de la lista de la izquierda para desplegar su ficha analítica del Manual de Cuentas.
+                  <div className="text-center p-20 bg-slate-900/10 border border-dashed border-slate-800 rounded-2xl text-base text-slate-500">
+                    Seleccioná una cuenta contable para desplegar su ficha analítica.
                   </div>
                 )}
               </div>
@@ -185,7 +187,7 @@ export default function App() {
         {activeTab === 'profesor' && <ProfesorIA />}
       </main>
 
-      <footer className="border-t border-zinc-900 mt-16 py-6 text-center text-xs text-zinc-600 font-medium tracking-wide">
+      <footer className="border-t border-slate-900 mt-20 py-8 text-center text-xs text-slate-600 font-medium tracking-wide">
         Hub Universitario de Ciencias Económicas • Licenciatura en Administración UGD 2026
       </footer>
     </div>
