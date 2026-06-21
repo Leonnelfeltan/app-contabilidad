@@ -57,50 +57,50 @@ export default function App() {
   ) : [];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500 selection:text-slate-950">
+    <div className="min-h-screen bg-neutral-950 text-zinc-100 font-sans selection:bg-indigo-500 selection:text-white antialiased">
       
       {/* HEADER PRINCIPAL */}
-      <header className="border-b border-slate-850 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2.5">
-            <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-xl border border-emerald-500/20">
+      <header className="border-b border-zinc-800 bg-neutral-900/60 backdrop-blur sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-5 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 bg-indigo-500/10 text-indigo-400 rounded-xl border border-indigo-500/20">
               <GraduationCap className="w-6 h-6" />
             </div>
             <div>
-              <h1 className="text-base font-bold bg-gradient-to-r bg-clip-text text-transparent from-emerald-400 to-teal-200">
+              <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r bg-clip-text text-transparent from-zinc-100 to-zinc-400">
                 UGD Campus Contable
               </h1>
-              <p className="text-[10px] text-slate-400 font-medium">Licenciatura en Administración • Panel de Alta Performance</p>
+              <p className="text-xs text-zinc-400 font-medium tracking-wide">Licenciatura en Administración • Panel de Alta Performance</p>
             </div>
           </div>
           
           {/* NAVEGACIÓN GLOBAL */}
-          <nav className="flex flex-wrap bg-slate-950 p-1 rounded-xl border border-slate-850 w-full md:w-auto justify-center gap-0.5">
-            <button onClick={() => setActiveTab('unidades')} className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${activeTab === 'unidades' ? 'bg-emerald-500 text-slate-950' : 'text-slate-400 hover:text-slate-200'}`}><BookOpen className="w-3.5 h-3.5" /> Módulos Teóricos</button>
-            <button onClick={() => setActiveTab('simulador')} className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${activeTab === 'simulador' ? 'bg-emerald-500 text-slate-950' : 'text-slate-400 hover:text-slate-200'}`}><RefreshCw className="w-3.5 h-3.5" /> Variaciones</button>
-            <button onClick={() => setActiveTab('cuentas')} className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${activeTab === 'cuentas' ? 'bg-emerald-500 text-slate-950' : 'text-slate-400 hover:text-slate-200'}`}><Search className="w-3.5 h-3.5" /> Manual Cuentas</button>
-            <button onClick={() => setActiveTab('cuestionario')} className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${activeTab === 'cuestionario' ? 'bg-emerald-500 text-slate-950' : 'text-slate-400 hover:text-slate-200'}`}><ClipboardCheck className="w-3.5 h-3.5" /> Cuestionarios</button>
-            <button onClick={() => setActiveTab('profesor')} className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${activeTab === 'profesor' ? 'bg-emerald-500 text-slate-950' : 'text-slate-400 hover:text-slate-200'}`}><MessagesSquare className="w-3.5 h-3.5" /> Profesor IA</button>
+          <nav className="flex flex-wrap bg-neutral-950 p-1.5 rounded-xl border border-zinc-800 w-full md:w-auto justify-center gap-1">
+            <button onClick={() => setActiveTab('unidades')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'unidades' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><BookOpen className="w-4 h-4" /> Módulos Teóricos</button>
+            <button onClick={() => setActiveTab('simulador')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'simulador' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><RefreshCw className="w-4 h-4" /> Variaciones</button>
+            <button onClick={() => setActiveTab('cuentas')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'cuentas' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><Search className="w-4 h-4" /> Manual Cuentas</button>
+            <button onClick={() => setActiveTab('cuestionario')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'cuestionario' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><ClipboardCheck className="w-4 h-4" /> Cuestionarios</button>
+            <button onClick={() => setActiveTab('profesor')} className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === 'profesor' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/10' : 'text-zinc-400 hover:text-zinc-200'}`}><MessagesSquare className="w-4 h-4" /> Profesor IA</button>
           </nav>
         </div>
       </header>
 
       {/* CONTENEDOR DINÁMICO */}
-      <main className="max-w-6xl mx-auto px-4 py-6">
+      <main className="max-w-6xl mx-auto px-5 py-8">
         
         {activeTab === 'unidades' && (
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
             {/* Sidebar de Selección de Unidad */}
-            <div className="space-y-1.5 bg-slate-900/30 p-2.5 rounded-2xl border border-slate-850 md:col-span-1">
-              <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500 px-2 block mb-1">Programa Analítico</span>
+            <div className="space-y-2 bg-neutral-900/40 p-3 rounded-2xl border border-zinc-800 md:col-span-1">
+              <span className="text-xs font-bold uppercase tracking-widest text-zinc-500 px-2 block mb-2">Programa Analítico</span>
               {[1, 2, 3, 4, 5].map((u) => (
                 <button
                   key={u}
                   onClick={() => setSelectedUnidadGlobal(u)}
-                  className={`w-full text-left px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
+                  className={`w-full text-left px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all ${
                     selectedUnidadGlobal === u 
-                      ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold' 
-                      : 'text-slate-400 hover:bg-slate-900/60'
+                      ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-semibold' 
+                      : 'text-zinc-400 hover:bg-neutral-900 hover:text-zinc-200'
                   }`}
                 >
                   Unidad {u} {u === 1 ? '• El SIC' : u === 2 ? '• El Patrimonio' : u === 3 ? '• Documentación' : u === 4 ? '• Las Cuentas' : '• Rubros'}
@@ -120,21 +120,20 @@ export default function App() {
         )}
 
         {activeTab === 'simulador' && (
-          <div className="max-w-2xl mx-auto space-y-4">
-            <div className="bg-slate-900 border border-slate-850 rounded-2xl p-6 space-y-4">
-              <span className="text-[9px] font-mono tracking-widest text-slate-500 uppercase font-bold block">Simulador de Variaciones Patrimoniales</span>
-              {/* ✅ CORREGIDO AQUÍ: Interpolación limpia del enunciado */}
-              <p className="text-sm font-semibold text-slate-100 leading-relaxed">Ejercicio: "{ejerciciosVariaciones[currentIdx].enunciado}"</p>
-              <div className="grid grid-cols-2 gap-3 pt-1">
+          <div className="max-w-2xl mx-auto space-y-5">
+            <div className="bg-neutral-900 border border-zinc-800 rounded-2xl p-8 space-y-5">
+              <span className="text-xs font-mono tracking-widest text-zinc-500 uppercase font-bold block">Simulador de Variaciones Patrimoniales</span>
+              <p className="text-lg font-medium text-zinc-100 leading-relaxed">Ejercicio: "{ejerciciosVariaciones[currentIdx].enunciado}"</p>
+              <div className="grid grid-cols-2 gap-4 pt-2">
                 {['Permutativa', 'Modificativa'].map((option) => (
-                  <button key={option} disabled={!!selectedAnswer} onClick={() => handleAnswerSelection(option)} className={`p-3 border rounded-xl text-xs font-bold transition-all ${selectedAnswer ? option === ejerciciosVariaciones[currentIdx].tipoCorrecto ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400' : 'border-slate-850 opacity-40 text-slate-500' : 'border-slate-850 bg-slate-950/40 text-slate-300 hover:border-slate-700'}`}>{option}</button>
+                  <button key={option} disabled={!!selectedAnswer} onClick={() => handleAnswerSelection(option)} className={`p-4 border rounded-xl text-sm font-semibold transition-all ${selectedAnswer ? option === ejerciciosVariaciones[currentIdx].tipoCorrecto ? 'border-indigo-500 bg-indigo-500/10 text-indigo-400 font-bold' : 'border-zinc-800 opacity-40 text-zinc-600' : 'border-zinc-800 bg-neutral-950/60 text-zinc-300 hover:border-zinc-600 hover:bg-neutral-900'}`}>{option}</button>
                 ))}
               </div>
               {showExplanation && (
-                <div className="p-4 bg-slate-950 border border-slate-850 rounded-xl space-y-2">
-                  <p className="text-xs text-emerald-400 font-mono font-bold">{ejerciciosVariaciones[currentIdx].efecto}</p>
-                  <p className="text-xs text-slate-400 leading-relaxed">{ejerciciosVariaciones[currentIdx].explicacion}</p>
-                  <button onClick={handleNextEjercicio} className="w-full bg-slate-100 text-slate-950 font-bold py-1.5 rounded-lg text-xs hover:bg-white transition-colors mt-2">Siguiente Ejercicio</button>
+                <div className="p-5 bg-neutral-950 border border-zinc-800 rounded-xl space-y-3">
+                  <p className="text-sm text-indigo-400 font-mono font-bold tracking-wide">{ejerciciosVariaciones[currentIdx].efecto}</p>
+                  <p className="text-sm text-zinc-400 leading-relaxed">{ejerciciosVariaciones[currentIdx].explicacion}</p>
+                  <button onClick={handleNextEjercicio} className="w-full bg-zinc-100 text-neutral-950 font-bold py-2.5 rounded-lg text-sm hover:bg-white transition-colors mt-3">Siguiente Ejercicio</button>
                 </div>
               )}
             </div>
@@ -143,14 +142,14 @@ export default function App() {
 
         {activeTab === 'cuentas' && (
           <div className="space-y-4">
-            <div className="flex flex-col md:flex-row gap-4 items-start">
-              <div className="w-full md:w-1/3 space-y-3">
-                <input type="text" placeholder="Buscar por cuenta o rubro..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-2 text-xs text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-emerald-500" />
-                <div className="bg-slate-900/40 border border-slate-850 rounded-2xl max-h-[380px] overflow-y-auto p-2 space-y-1">
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+              <div className="w-full md:w-1/3 space-y-4">
+                <input type="text" placeholder="Buscar por cuenta o rubro..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-neutral-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
+                <div className="bg-neutral-900/20 border border-zinc-800 rounded-2xl max-h-[420px] overflow-y-auto p-2 space-y-1">
                   {filteredCuentas.map((cuenta, idx) => (
-                    <button key={idx} onClick={() => setSelectedCuentaDetalle(cuenta)} className={`w-full text-left px-3 py-2 rounded-xl text-xs transition-all flex justify-between items-center ${selectedCuentaDetalle?.nombre === cuenta.nombre ? 'bg-emerald-500/10 text-emerald-400 font-bold' : 'text-slate-400 hover:bg-slate-950/40'}`}>
+                    <button key={idx} onClick={() => setSelectedCuentaDetalle(cuenta)} className={`w-full text-left px-4 py-3 rounded-xl text-sm transition-all flex justify-between items-center ${selectedCuentaDetalle?.nombre === cuenta.nombre ? 'bg-indigo-500/10 text-indigo-400 font-semibold' : 'text-zinc-400 hover:bg-neutral-900/60'}`}>
                       {cuenta.nombre}
-                      <span className="text-[9px] opacity-60 font-mono">{cuenta.naturaleza}</span>
+                      <span className="text-xs opacity-60 font-mono">{cuenta.naturaleza}</span>
                     </button>
                   ))}
                 </div>
@@ -158,22 +157,22 @@ export default function App() {
 
               <div className="w-full md:w-2/3">
                 {selectedCuentaDetalle ? (
-                  <div className="bg-slate-900 border border-slate-850 rounded-2xl p-5 space-y-4 text-xs leading-relaxed">
-                    <div className="flex justify-between items-center border-b border-slate-850 pb-2.5">
-                      <h3 className="text-sm font-bold text-slate-200">{selectedCuentaDetalle.nombre}</h3>
+                  <div className="bg-neutral-900 border border-zinc-800 rounded-2xl p-6 space-y-5 text-sm leading-relaxed">
+                    <div className="flex justify-between items-center border-b border-zinc-800 pb-3.5">
+                      <h3 className="text-base font-bold text-zinc-100">{selectedCuentaDetalle.nombre}</h3>
                       <div className="flex gap-2">
-                        <span className="text-[9px] px-2.5 py-0.5 rounded-full bg-slate-950 text-slate-300 border border-slate-800">Saldo {selectedCuentaDetalle.saldo}</span>
-                        <span className="text-[9px] px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">{selectedCuentaDetalle.rubro}</span>
+                        <span className="text-xs px-3 py-1 rounded-full bg-neutral-950 text-zinc-400 border border-zinc-800">Saldo {selectedCuentaDetalle.saldo}</span>
+                        <span className="text-xs px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">{selectedCuentaDetalle.rubro}</span>
                       </div>
                     </div>
-                    <p><strong className="text-slate-400 block mb-0.5">¿Qué representa?</strong> {selectedCuentaDetalle.representa}</p>
-                    <div className="grid grid-cols-2 gap-3 pt-1">
-                      <div className="bg-slate-950 p-3 rounded-xl border border-slate-850"><strong className="text-emerald-400 block mb-1">Se DEBITA:</strong> {selectedCuentaDetalle.debita}</div>
-                      <div className="bg-slate-950 p-3 rounded-xl border border-slate-850"><strong className="text-rose-400 block mb-1">Se ACREDITA:</strong> {selectedCuentaDetalle.acredita}</div>
+                    <p><strong className="text-zinc-400 block mb-1 font-medium">¿Qué representa?</strong> {selectedCuentaDetalle.representa}</p>
+                    <div className="grid grid-cols-2 gap-4 pt-2">
+                      <div className="bg-neutral-950 p-4 rounded-xl border border-zinc-800"><strong className="text-indigo-400 block mb-1.5 font-semibold">Se DEBITA:</strong> {selectedCuentaDetalle.debita}</div>
+                      <div className="bg-neutral-950 p-4 rounded-xl border border-zinc-800"><strong className="text-zinc-400 block mb-1.5 font-semibold">Se ACREDITA:</strong> {selectedCuentaDetalle.acredita}</div>
                     </div>
                   </div>
                 ) : (
-                  <div className="text-center p-12 bg-slate-900/20 border border-dashed border-slate-850 rounded-2xl text-xs text-slate-500">
+                  <div className="text-center p-16 bg-neutral-900/10 border border-dashed border-zinc-800 rounded-2xl text-sm text-zinc-500">
                     Seleccioná una cuenta de la lista de la izquierda para desplegar su ficha analítica del Manual de Cuentas.
                   </div>
                 )}
@@ -186,7 +185,7 @@ export default function App() {
         {activeTab === 'profesor' && <ProfesorIA />}
       </main>
 
-      <footer className="border-t border-slate-900 mt-12 py-5 text-center text-[9px] text-slate-600 font-medium">
+      <footer className="border-t border-zinc-900 mt-16 py-6 text-center text-xs text-zinc-600 font-medium tracking-wide">
         Hub Universitario de Ciencias Económicas • Licenciatura en Administración UGD 2026
       </footer>
     </div>
